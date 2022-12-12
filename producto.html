@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><style data-head-react="true">@font-face{font-family:'Proxima Nova';font-weight:300;font-display:swap;font-style:normal;src:url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff2) format("woff2"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff) format("woff"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.ttf) format("truetype")}@font-face{font-family:'Proxima Nova';font-weight:400;font-display:swap;font-style:normal;src:url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff2) format("woff2"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff) format("woff"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.ttf) format("truetype")}@font-face{font-family:'Proxima Nova';font-weight:600;font-display:swap;font-style:normal;src:url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff2) format("woff2"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff) format("woff"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.ttf) format("truetype")}</style><link href="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.3/mercadolibre/favicon.svg" rel="icon" data-head-react="true"/><link href="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.3/mercadolibre/180x180.png" rel="apple-touch-icon" data-head-react="true"/><script type="application/ld+json">{"url":"https://www.mercadolibre.com.ve/","@context":"https://schema.org","@type":"WebSite","potentialAction":{"target":"https://www.mercadolibre.com.ve/jm/search?as_word={search_term_string}&searchbox=google","@type":"SearchAction","query-input":"required name=search_term_string"}}</script><title>Mercado Libre Venezuela - Envíos Gratis en el día</title><meta name="description" content="Compre productos con Envío Gratis en el día en Mercado Libre Venezuela. Encuentre miles de marcas y productos a precios increíbles." data-head-react="true"/><meta property="og:image" content="https://http2.mlstatic.com/static/org-img/homesnw/mercado-libre.png?v=2" data-head-react="true"/><meta name="google-site-verification" content="y6ccWQk5ZtUz1KHCsyZ-8eCKaSiLB-ZuedpJ8uqo1iU" data-head-react="true"/><link rel="canonical" href="https://www.mercadolibre.com.ve" data-head-react="true"/><link rel="preconnect" href="https://adservice.google.com" data-head-react="true"/><link rel="preconnect" href="https://tpc.googlesyndication.com" data-head-react="true"/><link rel="preconnect" href="https://pagead2.googlesyndication.com" data-head-react="true"/><link rel="preconnect" href="https://data.mercadolibre.com" data-head-react="true"/><link rel="alternate" hrefLang="es-AR" href="https://www.mercadolibre.com.ar" data-head-react="true"/><link rel="alternate" hrefLang="es-BO" href="https://www.mercadolibre.com.bo" data-head-react="true"/><link rel="alternate" hrefLang="pt-BR" href="https://www.mercadolivre.com.br" data-head-react="true"/><link rel="alternate" hrefLang="es-CL" href="https://www.mercadolibre.cl" data-head-react="true"/><link rel="alternate" hrefLang="es-CO" href="https://www.mercadolibre.com.co" data-head-react="true"/><link rel="alternate" hrefLang="es-CR" href="https://www.mercadolibre.co.cr" data-head-react="true"/><link rel="alternate" hrefLang="es-DO" href="https://www.mercadolibre.com.do" data-head-react="true"/><link rel="alternate" hrefLang="es-EC" href="https://www.mercadolibre.com.ec" data-head-react="true"/><link rel="alternate" hrefLang="es-GT" href="https://www.mercadolibre.com.gt" data-head-react="true"/><link rel="alternate" hrefLang="es-HN" href="https://www.mercadolibre.com.hn" data-head-react="true"/><link rel="alternate" hrefLang="es-MX" href="https://www.mercadolibre.com.mx" data-head-react="true"/><link rel="alternate" hrefLang="es-NI" href="https://www.mercadolibre.com.ni" data-head-react="true"/><link rel="alternate" hrefLang="es-PA" href="https://www.mercadolibre.com.pa" data-head-react="true"/><link rel="alternate" hrefLang="es-PY" href="https://www.mercadolibre.com.py" data-head-react="true"/><link rel="alternate" hrefLang="es-PE" href="https://www.mercadolibre.com.pe" data-head-react="true"/><link rel="alternate" hrefLang="es-SV" href="https://www.mercadolibre.com.sv" data-head-react="true"/><link rel="alternate" hrefLang="es-UY" href="https://www.mercadolibre.com.uy" data-head-react="true"/><link rel="alternate" hrefLang="es-VE" href="https://www.mercadolibre.com.ve" data-head-react="true"/><link rel="alternate" hrefLang="x-default" href="https://www.mercadolibre.com" data-head-react="true"/><link rel="preconnect" href="https://securepubads.g.doubleclick.net" data-head-react="true"/><link rel="preconnect" href="https://www.googletagservices.com" data-head-react="true"/><link href="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.3/mercadolibre/navigation-desktop.css" rel="stylesheet" type="text/css" media="(min-width: 1024px)" onerror="(window['_pfl'] = window['_pfl'] || []).push(['css', this.href])" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+    <title>Home</title>
+</head>
+<body>
+
+
+    <header>
+        <div class="headerUpp">
+
+            <div><a class="logoPrincipal"><img src="/Imagenes Mercaddo Libre/logo.png" width="100px" alt=""></a></div>
+            <div><input class="buscadorPrincilar" type="text" placeholder="Buscar eventos, servicios y más..."><span></span></div>
+            <div><a href="" ><div class="btnEnvioExpress"><p>¡Recibe en menos de 2h con Envío Express!</p></div></a></div>
+
+        </div>
+        <div class="headerDown">
+
+            <div>
+                <ul>
+                    <li class="buttonCategoriasDesctop" id="btnCategorias">
+                        Categorías
+                        <span class="material-icons iconoFlechita">expand_more</span>
+                    </li>
+                    
+
+                    <span class="material-icons flechaVoltear">
+                        arrow_right
+                    </span>
+
+                    
+                    <ul class="listaCategoriasDesctop">
+
+                        <li><a href=""> Vehículos </a></li>
+                        <li><a href=""> Inmuebles </a></li>
+                        <li><a href=""> Celulares y Teléfonos </a></li>
+                        <li><a href=""> Moda </a></li>
+                        <li><a href=""> Electrodomésticos </a></li>
+                        <li><a href=""> Hogar y Muebles </a></li>
+                        <li><a href=""> Tv, Audio y Video </a></li>
+                        <li><a href=""> Computación </a></li>
+                        <li><a href=""> Gaming </a></li>
+                        <li><a href=""> Supermercado </a></li>
+                        <li><a href=""> Deportes y Fitness </a></li>
+                        <li><a href=""> Belleza y Cuidado personal </a></li>
+                        <li><a href=""> Oficinas e Industrias </a></li>
+                        <li><a href=""> Herramientas y Construcción </a></li>
+                        <li><a href=""> Juguetes y Bebés </a></li>
+                        <li><a href=""> Servicios </a></li>
+                        <li><a href=""> Ver más categorias </a></li>
+                       
+                    </ul>
+
+                </ul>
+            </div>
+            <div><ul class="navMenuDesctop">
+                <li>Historial</li>
+                <li>Tiendas oficiales</li>
+                <li>Ofertas de la semana</li>
+                <li>Vender</li>
+                <li>Ayuda</li>
+            </ul></div>
+            <div>
+                <ul class="UsuarioMenu">
+                    <li><img class="iconoUsuario" src="./Imagenes Mercaddo Libre/iconos/icono-usuario.png"> Usuario</li>
+                    <li>Mis compras</li> 
+                    <li>Favorito <span class="material-icons iconoFlechita">expand_more</span></li>
+                    <li><span class="material-icons iconoFlechita">notifications</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="blackScreen"></div>
+
+
+<main >
+    
+    <div class="cuadroSuperiorProducto ancho">
+        <ul class="lineaSugerencias">
+            <li>También puede interesarte:</li>
+            <li>-<a href=""> tv box</a></li>
+            <li>-<a href=""> android tv box</a></li>
+            <li>-<a href=""> simple tv</a></li>
+            <li>-<a href=""> roku</a></li>
+
+        </ul>
+        <div>
+            <div>
+
+                <li><a href=""> Volcer al listado</a><span class="separadorPalo">|</span></li>
+                <li><a href=""> android tv box</a></li>
+                <li><span class="separadorPalo">></span><a href=""> simple tv</a></li>
+                <li><span class="separadorPalo">></span><a href=""> roku</a></li>
+
+            </div>
+            <div>
+                <a href="">Compartir</a>
+                <span class="separadorPalo">|</span>
+                <a href="">Vender uno igual</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contenedorGrande contenedorBlanco ancho">
+
+        <div class="detalle_producto">
+
+            <div class="presentacion_producto">
+
+                <div class="imagenes_pequeña" id="hoverIMAGENES">
+
+                    <figure id="hoverImagen" >
+
+                        <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_1.jpg" alt="">
+                    
+                        <figure class="img__grande" id="imagenGrande">
+                        <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_1.jpg" alt="">
+                        </figure>
+                    
+                    </figure>
+
+                    <figure id="hoverImagen" >
+
+                    <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_2.jpg" alt="">
+                    
+                        <figure class="img__grande">
+                        <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_2.jpg" alt="">
+                        </figure>
+
+                    </figure id="hoverImagen" >
+                    
+                    <figure>
+                    <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_3.jpg" alt="">
+                    
+                        <figure class="img__grande">
+                        <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_3.jpg" alt="">
+                        </figure>
+                
+                    </figure id="hoverImagen" >
+                    
+                    <figure>
+                    <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_4.jpg" alt="">
+                    
+                        <figure class="img__grande">
+                        <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_4.jpg" alt="">
+                        </figure>
+                
+                    </figure>
+                
+                    <figure>
+                    <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_5.jpg" alt="">
+                    
+                        <figure class="img__grande">
+                        <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_5.jpg" alt="">
+                        </figure>
+                
+                    </figure>
+
+                </div>
+
+                <!-- <div class="imagen_grande">
+
+                    <figure>
+                    <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_1.jpg" alt="">
+                    </figure>
+
+                    <figure>
+                    <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_2.jpg" alt="">
+                    </figure>
+                        
+                    <figure>
+                    <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_3.jpg" alt="">
+                    </figure>
+                        
+                    <figure>
+                    <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_4.jpg" alt="">
+                    </figure>
+                    
+                    <figure>
+                    <img src="./Imagenes Mercaddo Libre/imagenes del producto 1/img_5.jpg" alt="">
+                    </figure>
+                
+                </div> -->
+
+            </div>
+
+
+
+            <div class="seccion contenedor_deontroDelProducto">
+
+                <div class="tituloSeccion">
+                    <h2>Basado en tu última visita</h2>
+                    <a href="#"> Ver historial</a>
+                </div>
+                <div class="elementosSeccion">
+    
+                    <div  class="elemento1">
+                        <div class="elemento contenedorBlanco">
+                            <div class="imagenElemento">
+                                <img src="./Imagenes Mercaddo Libre/elemento.jpg" alt="">
+                            </div>
+    
+                            <div class="descripcionElemento">
+                                <span class="precioAnterior">
+                                    <!-- <p>U$S 7</p>
+                                    <p>86</p> -->
+                                </span>
+                                <div class="PrecioActual">
+                                    <p>U$S</p>
+                                    <p class="precioElemento">5</p>
+                                    <p class="decimalesPrecioElemento">50</p>
+                                    <p>30% OFF</p>
+                                </div>
+                                <p>Envío gratis</p>
+                                <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div  class="elemento2">
+                        <div class="elemento contenedorBlanco">
+                            <div class="imagenElemento">
+                                <img src="./Imagenes Mercaddo Libre/elemento02.jpg" alt="">
+                            </div>
+    
+                            <div class="descripcionElemento">
+                                <span class="precioAnterior">
+                                    <!-- <p>U$S 7</p>
+                                    <p>86</p> -->
+                                </span>
+                                <div class="PrecioActual">
+                                    <p>U$S</p>
+                                    <p class="precioElemento">5</p>
+                                    <p class="decimalesPrecioElemento">50</p>
+                                    <p>30% OFF</p>
+                                </div>
+                                <p>Envío gratis</p>
+                                <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div  class="elemento3">
+                        <div class="elemento contenedorBlanco">
+                            <div class="imagenElemento">
+                                <img src="./Imagenes Mercaddo Libre/elemento03.jpg" alt="">
+                            </div>
+    
+                            <div class="descripcionElemento">
+                                <span class="precioAnterior">
+                                    <!-- <p>U$S 7</p>
+                                    <p>86</p> -->
+                                </span>
+                                <div class="PrecioActual">
+                                    <p>U$S</p>
+                                    <p class="precioElemento">5</p>
+                                    <p class="decimalesPrecioElemento">50</p>
+                                    <p>30% OFF</p>
+                                </div>
+                                <p>Envío gratis</p>
+                                <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                            </div>
+                        </div>
+                    </div>  
+                
+    
+                </div>
+    
+            </div>
+
+
+
+
+            <div class="caracteristicas_producto contenedor_deontroDelProducto">
+
+                <h2 class="h2">Características del producto</h2>
+
+                <div>
+
+                    <div>  
+                        <div><span class="material-icons"> wifi</span></div>
+                        <span>Es inalambico:</span> <p class="respuesta_caracteristicas">Sí</p>
+                    </div>
+
+                    <div>   
+                        <div><span class="material-icons">light_mode</span></div>
+                        <span>Con luz LED:</span>   <p class="respuesta_caracteristicas">Sí</p>
+                    </div>
+
+                    <div>   
+                        <div><span class="material-icons">mic</span></div>
+                        <span>Con micrófono:</span> <p class="respuesta_caracteristicas">Sí</p>
+                    </div>
+                </div>
+
+                
+                <button class="enlaceAzul" id="btnMasInfo2">Ver más caracteristicas<span class="material-icons"> expand_more </span></button>
+                    
+                
+
+                <div class="contenedorMenuDown contenedorCaracteristicas " id="contenedorMenuDown2">
+
+                    <div>
+
+                        <div class="caracteristica_1">
+                            <h3>Características generales</h3>
+
+                            <div class="tabla">
+
+                                <div class="filas_tabla">
+                                    <span>Fabricante</span>
+                                    <span>MG</span>
+                                </div>
+
+                                <div class="filas_tabla">
+                                    <span>Marca</span>
+                                    <span>F9 TWS</span>
+                                </div>
+
+                                <div class="filas_tabla">
+                                    <span>Línea</span>
+                                    <span>Bluetooth 5.0</span>
+                                </div>
+
+                                <div class="filas_tabla">
+                                    <span>Modelo</span>
+                                    <span>Waterproof 5.0</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="caracteristica_2">
+                            <h3>Especificaciones</h3>
+
+                            <div class="tabla">
+
+                                <div class="filas_tabla">
+                                    <span>Es monoaural</span>
+                                    <span>Sí</span>
+                                </div>
+
+                                <div class="filas_tabla">
+                                    <span>Es gamer</span>
+                                    <span>Sí</span>
+                                </div>
+
+                                <div class="filas_tabla">
+                                    <span>Con luz LED</span>
+                                    <span>Sí</span>
+                                </div>             
+
+                            </div>
+
+                        </div>
+
+                        <div class="caracteristica_3">
+                            <h3>Micrófono</h3>
+
+                            <div class="tabla">
+
+                                <div class="filas_tabla">
+                                    <span>Con micrófono</span>
+                                    <span>Sí</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div class="caracteristica_4">
+                            <h3>Conectividad</h3>
+
+                            <div class="tabla">
+
+                                <div class="filas_tabla">
+                                    <span>Es inalámbrico</span>
+                                    <span>Sí</span>
+                                </div>
+
+                                <div class="filas_tabla">
+                                    <span>Con Bluetooth</span>
+                                    <span>Sí</span>
+                                </div>
+
+                                <div class="filas_tabla">
+                                    <span>Versión de Bluetooth</span>
+                                    <span>5</span>
+                                </div>             
+
+                            </div>
+
+                        </div>
+
+                        <div class="caracteristica_5">
+                            <h3>Batería</h3>
+
+                            <div class="tabla">
+
+                                <div class="filas_tabla">
+                                    <span>Incluye estuche de carga</span>
+                                    <span>Sí</span>
+                                </div>
+
+                                <div class="filas_tabla">
+                                    <span>Con carga inalámbrica</span>
+                                    <span>Sí</span>
+                                </div>            
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="descripcion_producto contenedor_deontroDelProducto">
+                <h2 class="h2">Descripción</h2>
+                    <p>
+                    ENVIOS GRATIS.
+                    -A NIVEL NACIONAL POR: MRW, ZOOM Y DOMESA.
+                    -EN CARACAS POR: YUMMY.
+                    -TIENDA FISICA EN CHACAO (Contamos con Estacionamiento Gratuito).
+                    </p>
+
+
+                    <p><br>********************************************<br><br></p>
+                    
+                    <p>CARACTERÍSTICAS DEL PRODUCTO.</p>
+                    
+                    <p>
+                        -Modelo F9 TWS
+                        -Power Bank
+                        -1 estuche de carga (La carga del estuche dura 5 dias aproximadamente)
+                        -1 cable micro-USB
+                        -4 puntas para los oídos
+                        -Versión de Bluetooth: 5.0 + auriculares EDR
+                        -Tiempo de carga : 1 hora
+                        -Capacidad de la batería : Caja de carga 50mAh * 2 + 2000mAh
+                        -Tiempo de trabajo : 3-4 horas
+                        -Tamaño de paquete único: 16X12X6 cm
+                    </p>            
+                    
+                    <p><br>********************************************<br><br></p>
+                    
+                    <p>
+                        HORARIO DE TRABAJO.
+                        De Lunes A Viernes.
+                        De 9:00am A 4:30pm.
+                        Sabado: 9:00 am A 1:00 pm.
+                    </p>
+                    
+                    <p><br>*******************************************<br><br></p>
+                    
+                    <p>
+                        MÉTODOS DE PAGO.
+                        -Transferencias.
+                        - Pago Móvil.
+                        - Debito/Credito.
+                        - Zelle.
+                        - Binance
+                        -Divisas en efectivo.
+                    </p>
+                    
+                    <p><br>********************************************<br><br></p>
+
+                    <p>
+                        Ventas al MAYOR Y DETAL.
+                        Somos distribuidores de grandes tiendas y franquicias a nivel nacional.
+                        Precio DETAL: El Publicado.
+                        Precio MAYOR: Puede ofertar y solicitar nuestro catologo de productos al mayor.
+                        Todos Nuestros Productos tiene Garantía de 7 Días.
+                    </p>
+                </p>
+            </div>
+
+            <div class="pregunta_producto">
+
+            </div>
+            <div class="opinion_producto">
+
+            </div>
+
+
+        </div>
+
+
+<!------- Sidevar ---------------------------------------------------------->
+
+        <div class="detalle_anuncio">
+
+<!--------------- primer contenedeor de la derecha ----------------------->
+
+            <div class="contenedorBordeGris contenedorTransparente" >
+                <div>
+                    <p>Nuevo</p>
+                    <span class="separadorPalo">|</span>
+                    <p>1653 vendidos</p>
+                </div>
+
+                <div>
+                    <h1>Audífonos Inalámbricos F9 Bluetooth 5.0 + Power Bank</h1>
+                    <span class="material-icons">favorite_border</span>
+                </div>
+                
+                <div>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star_half </span>
+                    <p>(69)</p>
+                </div>
+
+                <div class="precio_Anterior">
+                    <p>U$S 7</p>
+                    <p>86</p>
+                </div>
+               
+                <div class="PrecioActual">
+                    <p>U$S</p>
+                    <p class="precioElemento">5</p>
+                    <p class="decimalesPrecioElemento">50</p>
+                    <p>30% OFF</p>
+                    <span class="material-icons pregunta"> help_outline </span>
+                </div>
+                
+                <span>Bs. 135.86</span>
+                <a href="#" class="enlaceAzul">Ver costos de envio</a>
+
+                <div>
+                    <span class="material-icons" style="font-size: 20px; margin-top: 3px;">
+                        local_shipping
+                    </span>
+                    <div>
+                        <span>Envío gratis a todo el pais</span>
+                        <p>Mun. Chacao (norte), Distrito Capital</p>
+                        <a href="#" class="enlaceAzul">Ver costos de envío</a>
+                    </div>
+                </div>
+
+
+                <div>
+                    <span>Color:</span>
+                    <p>Negro</p>
+                </div>
+                
+                <div>
+                    <span>Cantidad:</span>
+                    <p>1 unidad </p>
+                    <span class="material-icons"> expand_more </span>
+                    <span>(35 disponibles)</span>
+                </div>
+
+                <button>Comprar ahora</button>
+ 
+            </div>
+
+
+
+<!--------------- segundo contenedeor de la derecha ----------------------->
+
+
+            <div class="contenedorBordeGris contenedorTransparente_2">
+
+
+
+                <h2>Información sobre el vendedor</h2>
+
+                
+                <div>
+                    <span class="material-icons" style="font-size: 18px; margin: 3px 10px 0 0;"> place </span>
+                    <div>
+                        <p>Ubicación</p>
+                        <p>Mun. Chacao (norte), Distrito Capital</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <span class="material-icons" style="font-size: 18px; margin: 3px 10px 0 0;">military_tech</span>
+                    <div>
+                        <p>MercadoLíder Platinum</p>
+                        <p>¡Es uno de los mejores del sitio!</p>
+                    </div>
+                </div>
+
+                <ul>                    
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <div>
+                    <div>
+                        <span>98%</span>
+                        <p>de compradores lo recomiendan</p>
+                    </div>
+                    <div class="separador"></div>
+                    <div>
+                        <span>8 años</span>
+                        <p>vendiendo en Mercado Libre</p>
+                    </div>
+                    <div class="separador"></div>
+                    <div>
+                        <span>18301</span>
+                        <p>ventas concretadas</p>
+                    </div>
+                </div>
+
+                <a class="enlaceAzul" href="#">Ver más datos de este vendedor</a>
+
+                    
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+<!-- seccion de 3 productos --------------------------------->
+
+
+
+<!-- seccion 5 productos --------------------------------->
+
+        <div class="seccion">
+
+            <div class="tituloSeccion">
+                <h2>Quienes vieron este producto también compraron</h2>
+                
+            </div>
+            <div class="elementosSeccion">
+
+                <div  class="elemento1">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="elemento2">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento02.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="elemento3">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento03.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="elemento4">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento04.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="elemento5">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento05.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+            </div>
+
+        </div>
+
+<!-- seccion 5 productos  --------------------------------->
+
+    <div class="seccion">
+
+            <div class="tituloSeccion">
+                <h2>Quienes compraron este producto también compraron</h2>
+
+               
+            </div>
+            <div class="elementosSeccion">
+
+                <div  class="elemento1">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="elemento2">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento02.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="elemento3">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento03.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="elemento4">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento04.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="elemento5">
+                    <div class="elemento contenedorBlanco">
+                        <div class="imagenElemento">
+                            <img src="./Imagenes Mercaddo Libre/elemento05.jpg" alt="">
+                        </div>
+
+                        <div class="descripcionElemento">
+                            <span class="precioAnterior">
+                                <!-- <p>U$S 7</p>
+                                <p>86</p> -->
+                            </span>
+                            <div class="PrecioActual">
+                                <p>U$S</p>
+                                <p class="precioElemento">5</p>
+                                <p class="decimalesPrecioElemento">50</p>
+                                <p>30% OFF</p>
+                            </div>
+                            <p>Envío gratis</p>
+                            <p class="nombreElemento">Nombre Del Evento, Descripcion Corta</p>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+            </div>
+
+    </div>
+
+
+  
+
+
+
+    <div class="ContenedorMenuDownPadre">
+
+        <button id="btnMasInfo">Más información<span class="material-icons iconoFlechita">expand_more</span></button>
+        
+
+        <div class="contenedorMenuDown" id="contenedorMenuDown">
+
+            <div class="menuDown">
+                <div>
+                    <span>Acerca de</span>
+                    <a href="#">Mercado Libre</a>
+                    <a href="#">Investor relations</a>
+                    <a href="#">Sustentavilidad</a>
+                </div>
+                <div>
+                    <span>Otros sitios</span>
+                    <a href="#">Developers</a>
+                </div>
+                <div>
+                    <span>Ayuda</span>
+                    <a href="#">Comprar</a>
+                    <a href="#">Vender</a>
+                    <a href="#">Resolución de problemas</a>
+                    <a href="#">Centro de seguridad</a>
+                </div>
+                <div>
+                    <span>Redes sociales</span>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">YouTube</a>
+                </div>
+                <div>
+                    <span>Mi cuenta</span>
+                    <a href="#">Resumen</a>
+                    <a href="#">Favoritos</a>
+                    <a href="#">Vender</a>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <footer>
+        <div>
+            <a href="#">Trabaja con nosotros</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Cómo cuidamos tu privacidad</a>
+            <a href="#">Accesibilidad</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <div>
+            <p>Copyright © 199-2022 MercadoLibre Venezuela S.R.L. RIF: J-30694267-5.</p>
+        </div>    
+    </footer>
+
+
+</main>
+
+</body>
+<script src="./script.js"></script>
+</html>
