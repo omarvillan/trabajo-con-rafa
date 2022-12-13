@@ -28,10 +28,53 @@ function visibilidadDiv2(){
 
 // NO QUIERE
 
-padreImagenGrande.children[i].addEventListener("mouseover", function(){
+// padreImagenGrande.addEventListener("mouseover", function(e){
 
-    this.children[1].classList.toggle("zIndex10");
-});
+//     this.children[1].classList.toggle("zIndex10");
+//     console.log(e);
+// });
 
+
+
+
+// for (var i = 0; i < padreImagenGrande.children; i++){
+
+//     this.children[1].classList.toggle("zIndex10");
+// }
+
+
+
+
+for( let d =0; d < padreImagenGrande.children.length; d++){
+    padreImagenGrande.children[d].addEventListener("mouseover", function(){
+
+        mostrados = document.getElementsByClassName('zIndex10');
+        for( let j =0; j < mostrados.length; j++) {
+          mostrados[j].classList.remove('zIndex10');
+        };
+        this.children[1].classList.add("zIndex10");
+    });
+};
+
+
+// for( let d =0; d < padreImagenGrande.children.length; d++){
+//     padreImagenGrande.children[d].addEventListener("mouseover", function(){
+
+//         this.parentNode.children[d].children[1].classList.add("AAAAAAAAAAA");
+
+//         this.children[1].classList.add("zIndex10");
+
+//         console.log(padreImagenGrande.forEach);
+//     });
+// };
+
+
+
+
+
+// padreImagenGrande.children[i].addEventListener("mouseover", function(){
+
+//     this.children[1].classList.toggle("zIndex10");
+// });
 
 
