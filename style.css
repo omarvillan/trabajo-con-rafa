@@ -25,6 +25,7 @@ header > div{
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: space-between;
 }
 header > div:nth-child(1){
     height:62px;
@@ -40,12 +41,13 @@ header > div > div:nth-child(1){
     width: 185px; 
 }
 header > div > div:nth-child(2){
-    width: 51%;
+    width: 50%;
 }
-header > div > div:nth-child(3){
+header > div > div:nth-child(3)
+header > div > div:nth-child(4) {
     width: 34%; 
+    justify-content: center;
 }
-
 
 
 /*->>>>>>>>>>>>>>>>>--- header linea Arriba --->>>>>>>>>>>>>>>>>>- */
@@ -113,11 +115,12 @@ header > div > div:nth-child(3){
 
 /* -----boton Envio Express--- */
 
-header div:nth-child(3) {
+header > div:nth-child(3){
     display: flex;
     justify-content: end;
+    
 }
-.headerUpp div:nth-child(3) a {
+.headerUpp div:nth-child(4) a {
     text-decoration: none;
 }
 .btnEnvioExpress{
@@ -142,21 +145,40 @@ header div:nth-child(3) {
 
 /* Lista de categoria desplegable (menu oculto)*/
 
+
+.headerDown > div:nth-child(1) {
+    /* background-color: greenyellow; */
+
+    height: 30px;
+
+}
+
+.buttonCategoriasDesctop {
+    /* background-color: blue; */
+    width: 100px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
 .flechaVoltear {
     transform: rotateZ(-90deg);
     font-size: 50px;
     color: #333;
     position: absolute;
-    top: 73px;
-    left: 88px;
+    top: 7px;
+    left: 55px;
+    display: none;
+    z-index: 10;
 }
+
+
 
 .listaCategoriasDesctop{
     background-color: #333;
     color: #fff;
     list-style: none;
     position: absolute;
-    top: 100px;
+    top: 34px;
     margin-left: -8px;
     width: 240px;
     height: auto;
@@ -164,12 +186,17 @@ header div:nth-child(3) {
     border-radius: 4px;
     font-size: 14px;
     font-weight: 600;
-    z-index: 2;
+    z-index: 10;
+    flex-direction: column;
     display: none;
 }
-/* .listaCategoriasDesctop li {
+
+
+.listaCategoriasDesctop li {
      width: 240px; 
-} */
+}
+
+
 .listaCategoriasDesctop li a {
     text-decoration: none;
     color: #fff;
@@ -179,22 +206,24 @@ header div:nth-child(3) {
     padding: 8px 30px ;
     font-size: 14px;
 }
+
+
+
 .listaCategoriasDesctop li a:hover {
     background-color: #3483fa;
 }
 
 
+ 
 
 
 
+ .buttonCategoriasDesctop:hover .listaCategoriasDesctop,
+ .buttonCategoriasDesctop:hover .flechaVoltear {
 
+    display: flex;
 
-.buttonCategoriasDesctop:hover .listaCategoriasDesctop{
-    color: #ff0000 !important;
-    background-color: #ff0000;
-    display: inline-block;
-
-}
+} 
 
 
 
@@ -354,17 +383,18 @@ main {
     text-decoration: none;
 }
 
-/* ------------Los 5 elementos XD------------------------ */
+/* ------------Los 5 elementos ------------------------ */
 .elementosSeccion {
     display: flex;
     height: 330px;
+    
 }
 .elemento {
     width: 224px;
     height: auto;
     text-decoration: none;
+    
 }
-
 
 
 
@@ -379,7 +409,8 @@ main {
     width: 224px;
     height: 224px;
     position: relative;
-
+    display: flex;
+    align-items: center;
     overflow:hidden;
 
 }
@@ -471,8 +502,95 @@ main {
 }
 /* ................................................ */
 
-/* ---------------Seccion de dos anuncios----------------------------------------------------------------- */
 
+/* ---------------Seccion de 4 anuncios----------------------------------------------------------------- */
+
+
+
+.anuncios4 > div:nth-child(2) > div,
+.anuncios4 > div:nth-child(2) > div a {
+    width: 100%;
+    height: 340px;
+    align-items: center;
+}
+.anuncios4 > div:nth-child(2) > div a {
+    overflow: hidden;
+}
+.anuncios4 > div:nth-child(2) {
+    gap: 16px;
+}
+.anuncioD4 a > div:nth-child(1) {
+    height: 95px;
+    width: 100%;
+}
+.anuncioD4 a > div:nth-child(1) > img {
+    height: 100% ;
+    width: 100% ;
+}
+.anuncioD4 a > div:nth-child(3) {
+    /* background-color: #00b450; */
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    box-shadow: rgb(214, 214, 214) 0px 4px 5px;
+    margin-top: -40px;
+    z-index: 1;
+    overflow: hidden;
+    
+}
+.tituloMediano {
+    margin: 16px auto;
+    text-align: center;
+}
+.anuncioD4 a > div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* //////  imagenes pequeñas dentro del anuncio de 4   ///////////// */
+
+.anuncioD4 a > div:nth-child(4) div {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+.anuncioD4 a > div:nth-child(4) > div > figure{
+    border: rgba(219, 219, 219, 0.74) solid 1px;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anuncioD4 a > div:nth-child(4) > div >figure >img,
+.anuncioD4 a > div:nth-child(3) img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+.anuncioD4 a > div:nth-child(4) > span {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+    color: #99999999;
+    margin-top: 22px;
+}
+
+
+
+
+/* ---------------Seccion de 2 anuncios----------------------------------------------------------------- */
+
+
+.AnuncioDosSeccion {
+    justify-content: space-between;
+}
 .anuncioDos {
     width: 47.5%;
     height: 250px;
@@ -505,7 +623,8 @@ main {
     margin-bottom: 10px;
 }
 .infoAnuncioDos span:nth-child(2),
-.infoAnuncioDos span:nth-child(3) {
+.infoAnuncioDos span:nth-child(3),
+.tituloMediano {
     font-size: 28px;
     font-weight: 800;
     color: #4b4b4b;
@@ -544,6 +663,7 @@ main {
 .CategoriasPopulares {
     max-width: 1190px;
     margin: 0 auto 80px;
+    background-color: #00a650;
 }
 .CategoriasPopulares > div{
     display: flex;
@@ -599,6 +719,8 @@ main {
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.10) 0 1px 1px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 
 }
 .elementoHistorial div img {
@@ -613,7 +735,7 @@ main {
 /* --------Historial hover--------- */
 
 .elementoHistorial:hover {
-    height: 230px;
+    height: 250px;
     transition: all 0.15s ease;
 }
 .elementoHistorial:hover .descripcioHistorial {
@@ -845,6 +967,7 @@ footer > div p {
     justify-content: space-between;
     padding: 16px;
     border: rgba(153, 153, 153, 0.349) solid 1px;
+    position: relative;
 }
 .contenedorGrande:hover {
     box-shadow: none;
@@ -864,6 +987,7 @@ footer > div p {
     /* background-color: #00b450; */
     display: flex;
     flex-direction: column;
+    position: relative;
 
 }
 
@@ -966,7 +1090,7 @@ footer > div p {
 
 .contenedor_deontroDelProducto {
     padding-top: 40px;
-    margin: auto 40px 60px 40px;
+    margin: auto 0 60px 40px;
     border-top: rgb(228, 228, 228) solid 1px;
 }
 
@@ -986,6 +1110,19 @@ footer > div p {
 
 
 /* ||||||||||||||||||||||||   sidevar   |||||||||||||||||||||||||||||||||| */
+
+
+/* .fixedDiv {
+    position: fixed;
+    width: 363px !important;
+    
+    background-color: #00a650;
+    top: calc(100vh - 550px) ;
+
+    
+} */
+
+
 
 .contenedorBordeGris {
     padding: 16px;
@@ -1314,6 +1451,9 @@ margin-top: 40px;
     color: #666666;
 }
 
+
+/* ////////////////////    Preguntas y respuestas    /////////////////////// */
+
 .h4 {
     font-size: 18px;
     font-weight: 900;
@@ -1327,7 +1467,6 @@ margin-top: 40px;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 40px;
-    /* background-color: #00a650; */
 }
 .input_mas_button > div > input {
     padding: 13px 16px;
@@ -1364,7 +1503,7 @@ margin-top: 40px;
     display: flex;
     margin-top: 8px;
 }
-.PreguntaUsuario > div:nth-child(2) span {
+.PreguntaUsuario > div:nth-child(2) > span {
     border-left: rgb(228, 228, 228) solid 1px;
     border-bottom: rgb(228, 228, 228) solid 1px;
     height: 15px;
@@ -1372,9 +1511,11 @@ margin-top: 40px;
     color: #fff;
 }
 
-.PreguntaUsuario p {
+.texto_preguntas {
     font-size: 16px;
-    color: #0000008c;
+    color: #0000008c !important;
+    display: inline;
+    /* background-color: violet; */
     /* margin:8px 0 0 16px; */
 }
 

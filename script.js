@@ -26,13 +26,7 @@ function visibilidadDiv2(){
 }
 
 
-// NO QUIERE
 
-// padreImagenGrande.addEventListener("mouseover", function(e){
-
-//     this.children[1].classList.toggle("zIndex10");
-//     console.log(e);
-// });
 
 
 
@@ -72,9 +66,16 @@ for( let d =0; d < padreImagenGrande.children.length; d++){
 
 
 
-// padreImagenGrande.children[i].addEventListener("mouseover", function(){
-
-//     this.children[1].classList.toggle("zIndex10");
-// });
+const panelDerecha = document.getElementById("panelDerecha");
 
 
+
+
+window.addEventListener("scroll", function(){
+
+    panelDerecha.classList.toggle("fixedDiv",window.scrollY>0);
+
+
+
+
+});
