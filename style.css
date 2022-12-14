@@ -20,6 +20,7 @@ header{
     width: 100%;
     background-color:#fff159;
     padding: 0 8px;
+    z-index: 30;
 }
 header > div{
     display: flex;
@@ -168,7 +169,7 @@ header > div:nth-child(3){
     top: 7px;
     left: 55px;
     display: none;
-    z-index: 10;
+    z-index: 100;
 }
 
 
@@ -186,7 +187,7 @@ header > div:nth-child(3){
     border-radius: 4px;
     font-size: 14px;
     font-weight: 600;
-    z-index: 10;
+    z-index: 100;
     flex-direction: column;
     display: none;
 }
@@ -219,7 +220,7 @@ header > div:nth-child(3){
 
 
  .buttonCategoriasDesctop:hover .listaCategoriasDesctop,
- .buttonCategoriasDesctop:hover .flechaVoltear {
+ .buttonCategoriasDesctop:hover .flechaVoltear{
 
     display: flex;
 
@@ -279,12 +280,11 @@ header > div:nth-child(3){
 
 .blackScreen {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    z-index: 100;
-    margin-top: 100px;
-    display: none;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.205);
+    position: fixed;
+    z-index: 20;
+    /* display: none; */
 }
 
 
@@ -341,13 +341,24 @@ main {
 
 .slider {
     overflow: hidden;
-    margin: 0;
+    margin: 0 auto;
+    /* background-color: #00a650; */
+    background: #ebebeb;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 .slider ul {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.slider > ul > li > img {
+.slider > ul > li img {
     height: 100%;
+    display: flex;
+    flex-direction: row;
+
     }
 
 
@@ -656,26 +667,122 @@ main {
 
 
 
+
+
+
+
+
+
+
+
+/* ////////---Categorias populares------////////////////////////////////////////// */
+
+.supermercado {
+    margin-bottom: 40px !important;
+}
+.supermercado .super_grande {
+    max-width: 386px;
+    min-width: 200px;
+    height: 384px;
+    margin-right: 16px;
+    position: relative;
+    
+}
+.supermercado .super_grande .nombre_contenedor{
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    /* background-color: #00a650; */
+    background-color: white;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    color: #666;
+    padding: 15px 0 0 0 ;
+
+}
+
+
+
+
+.supermercado .super_pequeños {
+    max-width: 184px ;
+    /* width: 184px; */
+    height: 184px;
+    /* margin: 8px; */
+}
+.supermercado > div  {
+    display: flex;
+}
+.supermercado > div > div:nth-child(2) > div:nth-child(2) {
+    /* display: flex; */
+    margin-top: 16px;
+}
+.supermercado > div > div:nth-child(2) > div  {
+    display: flex;
+    gap: 16px;
+}
+
+
+.super_grande,
+.super_pequeños {
+    border-radius: 6px ;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ////////---Categorias populares------////////////////////////////////////////// */
 
 
 
+.CategoriasPopulares > div:nth-child(1) {
+    box-shadow: none;
+
+}
+
 .CategoriasPopulares {
     max-width: 1190px;
     margin: 0 auto 80px;
-    background-color: #00a650;
+    /* background-color: #00a650; */
+    border: none;
 }
 .CategoriasPopulares > div{
     display: flex;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.10) 0 1px 1px;
+    
 }
 .CategoriasPopulares > div  a{
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 170px;
+    /* width: 170px; */
+    width: 100%;
     height: 170px;
     background: #ffffff;
     border: #ebebeb solid 0.5px;
@@ -1005,7 +1112,6 @@ footer > div p {
     height: 50px;
     border-radius: 4px;
     border: #999 solid 1px;
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1099,7 +1205,7 @@ footer > div p {
 
 
 .zIndex10 {
-    z-index: 100;
+    z-index: 10;
     /* background-color: #00a650; */
 }
 
@@ -1166,19 +1272,24 @@ footer > div p {
     margin-right: 4px;
 }
 
-.contenedorTransparente > div:nth-child(4) {
+.precio_envio_tipo {
+    flex-direction: column;
+}
+
+
+
+.contenedorTransparente .precio_Anterior {
+    display: flex;
     font-size: 16px;
     color: #999;
     text-decoration: line-through;
 }
 
-.contenedorTransparente > div:nth-child(5) {
+.contenedorTransparente .PrecioActual {
     align-items: center;
     font-size: 18px;
 }
-.contenedorTransparente > div:nth-child(5) {
-    
-}
+
 .pregunta {
     font-size: 14px;
     margin-left: 8px;
@@ -1190,40 +1301,41 @@ footer > div p {
     width: 100%;
 }
 
-.contenedorTransparente > div:nth-child(8) {
+.envios {
     margin: 20px 0;
+    display: flex;
 
 }
-.contenedorTransparente > div:nth-child(8) span  {
+.envios span  {
     color: #00b450;
     font-size: 16px;
     margin-right: 10px;
 }
-.contenedorTransparente > div:nth-child(8) p  {
+.envios p  {
     color:#999;
     font-size: 14px;
 }
 
-.contenedorTransparente > div:nth-child(9),
-.contenedorTransparente > div:nth-child(10)  {
+.tipoDisponible,
+.cantidadDisponible  {
     color:#333;
     font-size: 16px;
     height: 48px;
     align-items: center;
 
 }
-.contenedorTransparente > div:nth-child(9) p,
-.contenedorTransparente > div:nth-child(10) p {
+.tipoDisponible p,
+.cantidadDisponible p {
     font-weight: 800;
     margin-left: 8px;
    
 }
-.contenedorTransparente > div:nth-child(10) span:nth-child(3) {
+.cantidadDisponible span:nth-child(3) {
     font-size: 20px;
     color: #3483fa;
     margin: 0 4px;
 }
-.contenedorTransparente > div:nth-child(10) span:nth-child(4) {
+.cantidadDisponible span:nth-child(4) {
     font-size: 13px;
 }
 
@@ -1758,10 +1870,372 @@ margin-top: 40px;
 
 
 
+
+
+
+
+/* /////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//////////////                                ////////////////////
+/////////////      Seccion de categorias      ////////////////////
+//////////////////////////////////////////////////////////////*/
+
+
+.seccionCategoria .Seccion {
+    display: flex;
+    margin-top: 16px;
+    /* background-color: #333;
+    padding: 10px; */
+}
+
+.seccionCategoria > .Seccion .anuncioDos {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+}
+.seccionCategoria .Seccion .anuncioDos .imagen_contenedor,
+.super_grande .imagen_contenedor,
+.super_pequeños .imagen_contenedor{
+    overflow: hidden;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imagen_contenedor img {
+    /* max-width: 100%; */
+   min-width: 100% !important; 
+   height: 100%;
+}
+.seccionCategoria .Seccion .anuncioDos .nombre_contenedor {
+    height: 45px;
+    /* background-color: #00a650; */
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 600;
+}
+.seccionCategoria .Seccion .anuncioDos .nombre_contenedor a {
+    margin-bottom: 8px;
+}
+
+
+/* >>>>>>>>>>>>>   Menu gigante de abajo  >>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+.menuEnormeCategorias {
+    width: 100%;   
+    height: 100%;
+}
+.menuEnormeCategorias .elemento {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 32px 40px;
+    justify-content: space-between;
+}
+.menuEnormeCategorias .elemento ul {
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.menuEnormeCategorias .elemento ul > li:nth-child(1) a {
+    font-size: 16px;
+    color: #000000cc !important;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+.menuEnormeCategorias .elemento ul > li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.menuEnormeCategorias .elemento ul > li a {
+    color: #8c8c8c;
+    text-decoration: none;
+}
+.menuEnormeCategorias .elemento:hover {
+    box-shadow: none;
+}
+
+
+
+
+
+
+.contenedorBordeGris .carruselProducto {
+    display: none;
+}
+.soloVistaEnMovil {
+    display: none;
+}
+.paravercionMovil {
+    display: none;
+}
+.debajo_del_boton div{
+    display: none;
+}
+#like_lleno {
+    display: none;
+}
+.listado {
+    display: none;
+}
+
 /*//////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 /////////////////////     Medias querry      /////////////////////////////
 ////////////////////////////////////////////////////////////////////// */
+@media (max-width: 500px){
+    .CategoriasPopulares > div  a:nth-child(3)  {
+        display: none;
+    }
+    .menuEnormeCategorias .elemento {
+        flex-direction: column !important;
+    }
+}
+
+
+
+
+
+@media (max-width: 800px){
+
+    .AnuncioDosSeccion > div:nth-child(3) {
+        display: none;
+    }
+    .CategoriasPopulares > div  a:nth-child(5),
+    .CategoriasPopulares > div  a:nth-child(4)  {
+        display: none;
+    }
+
+    .seccionDeAbajo {
+        display: none;
+    }
+    .descripcioHistorial p {
+        font-size: 13px;
+    }
+    .elementoHistorial {
+        height: 250px;
+    }
+    .elementoHistorial .descripcioHistorial {
+        opacity: 1;
+    }
+
+    /*///////////////////////////////////////////////////////////
+    ///////////// vista de producto   //////////////////////////
+    ///////////////////////////////////////////////////////// */
+    .contenedorBlanco {
+        border: none;
+    }
+
+    /* Quitar elementos en la parte superior (entre el cintendor principal y el header) */
+    .cuadroSuperiorProducto {
+        display: none;
+    }
+
+    /* Quitar imagene grande de la izquierda */
+    .presentacion_producto {
+        display: none;
+    }
+
+    /* Acomodar contenedor de la derecha como principal */
+    .contenedorGrande {
+        flex-direction: column-reverse;
+    }
+    .contenedorBordeGris {
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        padding-bottom: 40px;
+        border-bottom:  #0000001a solid 1px;
+    }
+    .contenedorGrande .detalle_anuncio {
+        margin: 0 ;
+        width: 100%;
+        max-width: 100% ;
+    }
+     h1 {
+        font-size: 16px;
+        font-weight: 400;
+     }
+     .contenedorBordeGris > div:nth-child(1) {
+        font-size: 12px;
+     }
+     .contenedorBordeGris > div:nth-child(2) span {
+        display: none;
+     }
+     #panelDerecha1 > div:nth-child(3) {
+        position: absolute;
+        right: 0;
+        margin-top: -10px;
+        font-size: 12px;
+     }
+
+
+
+    .carruselProducto {
+        /* position: relative; */
+        width: 100%;
+        overflow: hidden;
+        display: flex !important;
+    }
+    .carruselProducto img {
+        width: 100%;
+        max-height: 100%;
+    }
+    .precio_envio_tipo {
+        flex-direction: column-reverse;
+    }
+    .precio_envio_tipo .tipoDisponible {
+        display: flex;
+        border-radius: 6px;
+        background-color: #f5f5f5;
+        padding: 16px;
+        height: 100%;
+        margin-bottom: 8px;
+    }
+
+    /* /////  Aumento tamaño del precio   /////////////// */
+    .PrecioActual p {
+        font-size: 17px !important;
+    }
+    .PrecioActual p:nth-child(1),
+    .PrecioActual p:nth-child(2) {
+        font-size: 32px !important;
+    }
+    .precio_envio_tipo > div:nth-child(1) > span {
+        font-size: 19px;
+        display: block;
+    }
+
+    /* ///////  Cantidad disponible (crearle contenedor) */
+    .cantidadDisponible {
+        border-radius: 6px;
+        background-color: #f5f5f5;
+        padding: 16px;
+        height: 100%;
+        margin-bottom: 8px;
+    }
+
+    .debajo_del_boton {
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+    }
+    .debajo_del_boton div {
+        display: flex;
+        color:#3483fa;
+        justify-content: center;
+        margin-top: 16px;
+    }
+    .debajo_del_boton div p {
+        margin-left: 6px;
+        color:#3483fa;
+    }
+
+    /* -- ver mas datos del vendedor (hacer contenedor) */
+    .enlaceAzulMovil {
+        border-radius: 6px;
+        border: rgba(228, 228, 228, 0.452) solid 1px;
+        box-shadow: rgb(221, 221, 221) 0 1px 3px;
+        padding: 16px;
+        height: 100%;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+
+    /* /////   secciones divisoras de los sidevar  /////////// */
+    .paravercionMovil {
+        display: flex;
+    }
+    .tituloSeccion h2,
+    .h2 {
+        font-weight: 400;
+        font-size: 20px;
+        color: #000000e6;
+    }
+    .elemento {
+        border: #dbdbdb69 solid 1px;
+    }
+    .elemento .descripcionElemento{
+        height: auto ;
+    }
+    .elemento .descripcionElemento > p:nth-child(4) {
+        display: flex;
+    }
+    .contenedor_deontroDelProducto,
+    .opiniones {
+        margin: auto 0;
+    }
+
+    /* ////   opiniones del producto (colocar horizontal)  ///////////////////// */
+    .opinion_producto > div {
+        flex-direction: column;
+       
+    }
+    .calificacion {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: #00a650; */
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .Id_denunciar a {
+        box-shadow: none;
+        border: none;
+        margin-bottom: 0;
+
+    }
+   
+
+    .listado {
+        display: flex;
+        margin-left: 8px;
+        padding: 16px 16px 16px;
+    }
+    .listado a {
+        text-decoration: none;
+        color: #333;
+    }
+
+
+
+    
+
+
+    .ContenedorMenuDownPadre {
+        display: none;
+    }
+    footer {
+        height: 100%;
+        padding: 22px 10% 22px 10%;
+    }
+    footer > div:nth-child(1) a {
+        font-size: 14px;
+    }
+    footer > div:nth-child(1) a:nth-child(1),
+    footer > div:nth-child(1) a:nth-child(5) {
+        display: none;
+    }
+}
+
+
+
+
 
 
 @media (max-width: 1000px){
@@ -1801,7 +2275,8 @@ margin-top: 40px;
     }
   
 
-/* eliminar seccion del boton verde arriba en el header */
+    /* eliminar seccion del boton verde arriba en el header */
+
     header > div:nth-child(1) > div:nth-child(3) {
         width: 0%;
     }
@@ -1809,12 +2284,15 @@ margin-top: 40px;
         display: none;
     }
 
-    
-    /* .infoAnuncioDos {
-        width: 50px;
-    } */
+
+   .AnuncioDosSeccion > div:nth-child(4) {
+    display: none;
+   }
 
 
-
-
+   .CategoriasPopulares > div  a:nth-child(6),
+   .CategoriasPopulares > div  a:nth-child(7)  {
+    display: none;
+   }
 }
+

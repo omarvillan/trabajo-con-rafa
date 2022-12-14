@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><link rel="preload" href="https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-head-react="true"/><style data-head-react="true">@font-face{font-family:'Proxima Nova';font-weight:300;font-display:swap;font-style:normal;src:url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff2) format("woff2"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.woff) format("woff"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-light.ttf) format("truetype")}@font-face{font-family:'Proxima Nova';font-weight:400;font-display:swap;font-style:normal;src:url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff2) format("woff2"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.woff) format("woff"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-regular.ttf) format("truetype")}@font-face{font-family:'Proxima Nova';font-weight:600;font-display:swap;font-style:normal;src:url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff2) format("woff2"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.woff) format("woff"),url(https://http2.mlstatic.com/ui/webfonts/v3.0.0/proxima-nova/proximanova-semibold.ttf) format("truetype")}</style><link href="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.3/mercadolibre/favicon.svg" rel="icon" data-head-react="true"/><link href="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.3/mercadolibre/180x180.png" rel="apple-touch-icon" data-head-react="true"/><script type="application/ld+json">{"url":"https://www.mercadolibre.com.ve/","@context":"https://schema.org","@type":"WebSite","potentialAction":{"target":"https://www.mercadolibre.com.ve/jm/search?as_word={search_term_string}&searchbox=google","@type":"SearchAction","query-input":"required name=search_term_string"}}</script><title>Mercado Libre Venezuela - Envíos Gratis en el día</title><meta name="description" content="Compre productos con Envío Gratis en el día en Mercado Libre Venezuela. Encuentre miles de marcas y productos a precios increíbles." data-head-react="true"/><meta property="og:image" content="https://http2.mlstatic.com/static/org-img/homesnw/mercado-libre.png?v=2" data-head-react="true"/><meta name="google-site-verification" content="y6ccWQk5ZtUz1KHCsyZ-8eCKaSiLB-ZuedpJ8uqo1iU" data-head-react="true"/><link rel="canonical" href="https://www.mercadolibre.com.ve" data-head-react="true"/><link rel="preconnect" href="https://adservice.google.com" data-head-react="true"/><link rel="preconnect" href="https://tpc.googlesyndication.com" data-head-react="true"/><link rel="preconnect" href="https://pagead2.googlesyndication.com" data-head-react="true"/><link rel="preconnect" href="https://data.mercadolibre.com" data-head-react="true"/><link rel="alternate" hrefLang="es-AR" href="https://www.mercadolibre.com.ar" data-head-react="true"/><link rel="alternate" hrefLang="es-BO" href="https://www.mercadolibre.com.bo" data-head-react="true"/><link rel="alternate" hrefLang="pt-BR" href="https://www.mercadolivre.com.br" data-head-react="true"/><link rel="alternate" hrefLang="es-CL" href="https://www.mercadolibre.cl" data-head-react="true"/><link rel="alternate" hrefLang="es-CO" href="https://www.mercadolibre.com.co" data-head-react="true"/><link rel="alternate" hrefLang="es-CR" href="https://www.mercadolibre.co.cr" data-head-react="true"/><link rel="alternate" hrefLang="es-DO" href="https://www.mercadolibre.com.do" data-head-react="true"/><link rel="alternate" hrefLang="es-EC" href="https://www.mercadolibre.com.ec" data-head-react="true"/><link rel="alternate" hrefLang="es-GT" href="https://www.mercadolibre.com.gt" data-head-react="true"/><link rel="alternate" hrefLang="es-HN" href="https://www.mercadolibre.com.hn" data-head-react="true"/><link rel="alternate" hrefLang="es-MX" href="https://www.mercadolibre.com.mx" data-head-react="true"/><link rel="alternate" hrefLang="es-NI" href="https://www.mercadolibre.com.ni" data-head-react="true"/><link rel="alternate" hrefLang="es-PA" href="https://www.mercadolibre.com.pa" data-head-react="true"/><link rel="alternate" hrefLang="es-PY" href="https://www.mercadolibre.com.py" data-head-react="true"/><link rel="alternate" hrefLang="es-PE" href="https://www.mercadolibre.com.pe" data-head-react="true"/><link rel="alternate" hrefLang="es-SV" href="https://www.mercadolibre.com.sv" data-head-react="true"/><link rel="alternate" hrefLang="es-UY" href="https://www.mercadolibre.com.uy" data-head-react="true"/><link rel="alternate" hrefLang="es-VE" href="https://www.mercadolibre.com.ve" data-head-react="true"/><link rel="alternate" hrefLang="x-default" href="https://www.mercadolibre.com" data-head-react="true"/><link rel="preconnect" href="https://securepubads.g.doubleclick.net" data-head-react="true"/><link rel="preconnect" href="https://www.googletagservices.com" data-head-react="true"/><link href="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.3/mercadolibre/navigation-desktop.css" rel="stylesheet" type="text/css" media="(min-width: 1024px)" onerror="(window['_pfl'] = window['_pfl'] || []).push(['css', this.href])" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.css">
+
+    <link rel="stylesheet" href="/style.css">
+    <title>Home</title>
+</head>
+<body>
+
+
+    <header>
+        <div class="headerUpp">
+
+            <div class="logo"><a href="./home.html" class="logoPrincipal"><img src="/Imagenes Mercaddo Libre/logo.png" width="100px" alt=""></a></div>
+            <div class="boton_busqueda">
+
+                <input class="buscadorPrincilar" type="text" placeholder="Buscar eventos, servicios y más...">
+                <button><span class="material-icons">search</span></button>
+            
+            
+            </div>
+
+            <button><span class="material-icons">menu</span></button>
+            
+            <div><a href="" ><div class="btnEnvioExpress"><p>¡Recibe en menos de 2h con Envío Express!</p></div></a></div>
+
+        </div>
+        <div class="headerDown">
+
+            <div>
+                <ul>
+                    <li class="buttonCategoriasDesctop" id="btnCategorias">
+                        Categorías
+                        <span class="material-icons iconoFlechita">expand_more</span>
+                    
+                    
+                        
+                        <span class="material-icons flechaVoltear">
+                            arrow_right
+                        </span>
+
+                    
+                        <ul class="listaCategoriasDesctop">
+
+                            <li><a href="./categorias.html"> Vehículos </a></li>
+                            <li><a href="./categorias.html"> Inmuebles </a></li>
+                            <li><a href="./categorias.html"> Celulares y Teléfonos </a></li>
+                            <li><a href="./categorias.html"> Moda </a></li>
+                            <li><a href="./categorias.html"> Electrodomésticos </a></li>
+                            <li><a href="./categorias.html"> Hogar y Muebles </a></li>
+                            <li><a href="./categorias.html"> Tv, Audio y Video </a></li>
+                            <li><a href="./categorias.html"> Computación </a></li>
+                            <li><a href="./categorias.html"> Gaming </a></li>
+                            <li><a href="./categorias.html"> Supermercado </a></li>
+                            <li><a href="./categorias.html"> Deportes y Fitness </a></li>
+                            <li><a href="./categorias.html"> Belleza y Cuidado personal </a></li>
+                            <li><a href="./categorias.html"> Oficinas e Industrias </a></li>
+                            <li><a href="./categorias.html"> Herramientas y Construcción </a></li>
+                            <li><a href="./categorias.html"> Juguetes y Bebés </a></li>
+                            <li><a href="./categorias.html"> Servicios </a></li>
+                            <li><a href="./categorias.html"> Ver más categorias </a></li>
+                        
+                        </ul>
+                    </li>
+                </ul>
+
+
+            </div>
+
+
+            <div>
+                <ul class="navMenuDesctop">
+                <li>Historial</li>
+                <li>Tiendas oficiales</li>
+                <li>Ofertas de la semana</li>
+                <li>Vender</li>
+                <li>Ayuda</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul class="UsuarioMenu">
+                    <li><img class="iconoUsuario" src="./Imagenes Mercaddo Libre/iconos/icono-usuario.png"> Usuario</li>
+                    <li>Mis compras</li> 
+                    <li>Favorito <span class="material-icons iconoFlechita">expand_more</span></li>
+                    <li><span class="material-icons iconoFlechita">notifications</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="blackScreen5" id="blackScreen"></div>
+
+    <div class="slider">
+        <ul>
+            <li><img src="./Imagenes Mercaddo Libre/img pequeñas/029.JPG" alt="" srcset=""></li>
+        </ul>
+    </div>
+
+
+    <main >
+       
+
+<!-- seccion 3 de categorias --------------------------------->
+
+<div class="seccionCategoria ancho">
+
+           
+    <div class="Seccion">
+
+            <div class="anuncioDos contenedorBlanco">
+
+                <div class="imagen_contenedor">
+                    <img src="./Imagenes Mercaddo Libre/img pequeñas/020.JPG" alt="">
+                </div> 
+
+                <div class="nombre_contenedor">
+                    <span>DAMAS</span>
+                </div>   
+
+            </div>
+
+
+
+            <div class="anuncioDos contenedorBlanco">
+                <div class="imagen_contenedor">
+                    <img src="./Imagenes Mercaddo Libre/img pequeñas/021.JPG" alt="">
+                </div> 
+                <div class="nombre_contenedor">
+                    <span>CABALLEROS</span>
+                </div>                          
+            </div>
+
+
+
+            <div class="anuncioDos contenedorBlanco">
+                <div class="imagen_contenedor">
+                    <img src="./Imagenes Mercaddo Libre/img pequeñas/022.JPG" alt="">
+                </div> 
+                <div class="nombre_contenedor">
+                    <span>NIÑOS</span>
+                </div>                          
+            </div>
+    
+
+    </div>
+
+</div>
+
+
+<!-- seccion 4 de categorias --------------------------------->
+
+<div class="seccionCategoria ancho">
+
+           
+    <div class="Seccion">
+
+            <div class="anuncioDos contenedorBlanco">
+
+                <div class="imagen_contenedor">
+                    <img src="./Imagenes Mercaddo Libre/img pequeñas/025.JPG" alt="">
+                </div> 
+
+                <div class="nombre_contenedor">
+                    <span>ROPA</span>
+                     <a class="enlaceAzul" href="#"> Ver ofertas</a>
+                </div>   
+
+            </div>
+
+            <div class="anuncioDos contenedorBlanco">
+                <div class="imagen_contenedor">
+                    <img src="./Imagenes Mercaddo Libre/img pequeñas/026.JPG" alt="">
+                </div> 
+                <div class="nombre_contenedor">
+                    <span>JOYAS Y RELOJES</span>
+                    <a class="enlaceAzul" href="#"> Ver ofertas</a>
+                </div>                          
+            </div>
+
+
+
+            <div class="anuncioDos contenedorBlanco">
+
+                <div class="imagen_contenedor">
+                    <img src="./Imagenes Mercaddo Libre/img pequeñas/027.JPG" alt="">
+                </div> 
+
+                <div class="nombre_contenedor">
+                    <span>BOLSOS Y MOCHILAS</span>
+                    <a class="enlaceAzul" href="#"> Ver ofertas</a>
+                </div>   
+
+            </div>
+
+
+
+            <div class="anuncioDos contenedorBlanco">
+                <div class="imagen_contenedor">
+                    <img src="./Imagenes Mercaddo Libre/img pequeñas/028.JPG" alt="">
+                </div> 
+                <div class="nombre_contenedor">
+                    <span>LENTES</span>
+                    <a class="enlaceAzul" href="#"> Ver ofertas</a>
+                </div>                          
+            </div>
+    
+
+    </div>
+
+</div>
+
+<!-- seccion de 2 categorias --------------------------------->
+
+<div class="seccionCategoria ancho">
+
+           
+    <div class="Seccion">
+
+            <div class="anuncioDos contenedorBlanco">
+
+                <div class="imagen_contenedor">
+                    <img src="./Imagenes Mercaddo Libre/img pequeñas/023.JPG" alt="">
+                </div> 
+
+                <div class="nombre_contenedor">
+                    <span>ZAPATOS CASUALES</span>
+                </div>   
+
+            </div>
+
+
+
+            <div class="anuncioDos contenedorBlanco">
+                <div class="imagen_contenedor">
+                    <img src="./Imagenes Mercaddo Libre/img pequeñas/024.JPG" alt="">
+                </div> 
+                <div class="nombre_contenedor">
+                    <span>ZAPATOS DEPORTIVOS</span>
+                </div>                          
+            </div>
+
+
+    
+
+    </div>
+
+</div>
+
+
+
+
+
+<div class="seccion">
+
+    <div class="tituloSeccion">
+        <h2>Ropa Zapatos y Accesorios</h2>
+    </div>
+
+    <div class="elementosSeccion menuEnormeCategorias">
+
+        <div class="elemento contenedorBlanco">
+
+            <div>
+
+                <ul>
+                    <li class="h3"><a href="">Abrigos</a></li>
+
+                    <li><a href="#">Buzos</a></li>
+                    <li><a href="#">Chaquetas y Abrigos</a></li>
+                    <li><a href="#">Sacos, Suéteres y Chalecos</a></li>
+                    <li><a href="#">Otros</a></li>
+
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Accesorios de Moda</a></li>
+
+                    <li><a href="#">Abanicos</a></li>
+                    <li><a href="#">Accesorios para el Cabello</a></li>
+                    <li><a href="#">Antifaces para Dormir</a></li>
+                    <li><a href="#">Bufandas y Pañuelos</a></li>
+                    <li><a href="#">Calentadores de Piernas</a></li>
+                    <li><a href="#">Corbatas</a></li>
+                    <li><a href="#">Correas</a></li>
+                    <li><a href="#">Espejos de Mano</a></li>
+                    <li><a href="#">Fajas</a></li>
+                    <li><a href="#">Filtros para Tapabocas</a></li>
+                    <li><a href="#">Gafas y Accesorios</a></li>
+                    <li><a href="#">Guantes</a></li>
+                    <li><a href="#">Llaveros</a></li>
+                    <li><a href="#">Orejeras</a></li>
+                    <li><a href="#">Pareos</a></li>
+                    <li><a href="#">Prendedores</a></li>
+                    <li><a href="#">Prendedores</a></li>
+                    <li><a href="#">Sombrillas</a></li>
+                    <li><a href="#">Tapabocas Reutilizables</a></li>
+                    <li><a href="#">Tirantas y Cargaderas</a></li>
+                    <li><a href="#">Toallas de Playa</a></li>
+                    <li><a href="#">Otros Accesorios</a></li>
+
+                </ul>
+            </div>
+
+            <div>
+
+                <ul>
+                    <li class="h3"><a href="">Bermudas y Pantalonetas</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Blusas</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Calzado</a></li>
+
+                    <li><a href="#">Alpargatas</a></li>
+                    <li><a href="#">Babuchas y Pantuflas</a></li>
+                    <li><a href="#">Baletas y Espadrilas</a></li>
+                    <li><a href="#">Cubre Zapatos</a></li>
+                    <li><a href="#">Kits de Mocasines y Oxfords</a></li>
+                    <li><a href="#">Mocasines y Oxfords</a></li>
+                    <li><a href="#">Sandalias y Chanclas</a></li>
+                    <li><a href="#">Tacones</a></li>
+                    <li><a href="#">Tenis</a></li>
+                    <li><a href="#">Otros</a></li>
+
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Camisas</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Camisetas</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Enterizos</a></li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <ul>
+                    <li class="h3"><a href="">Equipaje, Bolsos y Carteras</a></li>
+
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Billeteras y Monederos</a></li>
+                    <li><a href="#">Bolsos</a></li>
+                    <li><a href="#">Bolsos Carriel y Maletines</a></li>
+                    <li><a href="#">Canguros</a></li>
+                    <li><a href="#">Equipaje y Accesorios de Viaje</a></li>
+                    <li><a href="#">Kits de Morrales Escolares</a></li>
+                    <li><a href="#">Loncheras</a></li>
+                    <li><a href="#">Morrales</a></li>
+                    <li><a href="#">Neceser</a></li>
+                    <li><a href="#">Sets de Bolsos</a></li>
+                    <li><a href="#">Otros</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Faldas</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Indumentaria Laboral y Escolar</a></li>
+
+                    <li><a href="#">Accesorios Tácticos</a></li>
+                    <li><a href="#">Batas Escolares</a></li>
+                    <li><a href="#">Ropa Militar y Policial</a></li>
+                    <li><a href="#">Uniformes Escolares</a></li>
+                    <li><a href="#">Uniformes y Ropa de Trabajo</a></li>
+                    <li><a href="#">Otros</a></li>
+
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Kimonos</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Leggings</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Pantalones y Jeans</a></li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <ul>
+                    <li class="h3"><a href="">Ropa Deportiva</a></li>
+
+                    <li><a href="#">Bolsos Deportivos</a></li>
+                    <li><a href="#">Buzos</a></li>
+                    <li><a href="#">Camisetas y Polos</a></li>
+                    <li><a href="#">Chaquetas</a></li>
+                    <li><a href="#">Conjuntos Deportivos</a></li>
+                    <li><a href="#">Gorras</a></li>
+                    <li><a href="#">Guantes</a></li>
+                    <li><a href="#">Leggings</a></li>
+                    <li><a href="#">Mangas de Compresión</a></li>
+                    <li><a href="#">Medias</a></li>
+                    <li><a href="#">Pantalones y Sudaderas</a></li>
+                    <li><a href="#">Ropa de Danza y Patinaje</a></li>
+                    <li><a href="#">Shorts</a></li>
+                    <li><a href="#">Tobilleras</a></li>
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Vestidos</a></li>
+                    <li><a href="#">Otros</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Ropa Interior y de Dormir</a></li>
+
+                    <li><a href="#">Ropa de Dormir</a></li>
+                    <li><a href="#">Ropa Interior</a></li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <ul>
+                    <li class="h3"><a href="">Ropa para Bebés</a></li>
+
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Batas</a></li>
+                    <li><a href="#">Blusas</a></li>
+                    <li><a href="#">Bodys</a></li>
+                    <li><a href="#">Buzos</a></li>
+                    <li><a href="#">Camisas</a></li>
+                    <li><a href="#">Camisetas</a></li>
+                    <li><a href="#">Chaquetas</a></li>
+                    <li><a href="#">Conjuntos</a></li>
+                    <li><a href="#">Faldas</a></li>
+                    <li><a href="#">Jardineras</a></li>
+                    <li><a href="#">Kits para Salida del Hospital</a></li>
+                    <li><a href="#">Medias</a></li>
+                    <li><a href="#">Pantalones</a></li>
+                    <li><a href="#">Pijamas</a></li>
+                    <li><a href="#">Sacos y Suéteres</a></li>
+                    <li><a href="#">Shorts</a></li>
+                    <li><a href="#">Trajes de Baño</a></li>
+                    <li><a href="#">Vestidos</a></li>
+                    <li><a href="#">Zapatos</a></li>
+                    <li><a href="#">Otros</a></li>
+
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Ropa por Mayor</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Trajes</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Vestidos</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Vestidos de Baño</a></li>
+                </ul>
+
+                <ul>
+                    <li class="h3"><a href="">Otros</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+   
+
+
+
+
+<div class="ContenedorMenuDownPadre">
+
+    <button id="btnMasInfo">Más información<span class="material-icons iconoFlechita">expand_more</span></button>
+    
+
+    <div class="contenedorMenuDown" id="contenedorMenuDown">
+
+        <div class="menuDown">
+            <div>
+                <span>Acerca de</span>
+                <a href="#">Mercado Libre</a>
+                <a href="#">Investor relations</a>
+                <a href="#">Sustentavilidad</a>
+            </div>
+            <div>
+                <span>Otros sitios</span>
+                <a href="#">Developers</a>
+            </div>
+            <div>
+                <span>Ayuda</span>
+                <a href="#">Comprar</a>
+                <a href="#">Vender</a>
+                <a href="#">Resolución de problemas</a>
+                <a href="#">Centro de seguridad</a>
+            </div>
+            <div>
+                <span>Redes sociales</span>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+            <div>
+                <span>Mi cuenta</span>
+                <a href="#">Resumen</a>
+                <a href="#">Favoritos</a>
+                <a href="#">Vender</a>
+            </div>
+        </div>
+    </div>   
+</div>
+
+<footer>
+    <div>
+        <a href="#">Trabaja con nosotros</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Cómo cuidamos tu privacidad</a>
+        <a href="#">Accesibilidad</a>
+        <a href="#">Ayuda</a>
+    </div>
+    <div>
+        <p>Copyright © 199-2022 MercadoLibre Venezuela S.R.L. RIF: J-30694267-5.</p>
+    </div>    
+</footer>
+</main>
+</body>
+<script src="./script.js"></script>
+</html>

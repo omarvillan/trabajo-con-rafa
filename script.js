@@ -1,13 +1,19 @@
 // alert("todo ok por aqui");
 
+const blackScreen = document.getElementById("blackScreen");
 const btnMasInfo = document.getElementById("btnMasInfo");
 const btnMasInfo2 = document.getElementById("btnMasInfo2");
 const contenedorMenuDown = document.getElementById("contenedorMenuDown");
 const contenedorMenuDown2 = document.getElementById("contenedorMenuDown2");
 const btnCategorias = document.getElementById("btnCategorias");
 
-const imagenGrande = document.getElementById("imagenGrande");
+
+
 const padreImagenGrande = document.getElementById("hoverIMAGENES");
+
+
+
+
 
 
 
@@ -18,6 +24,11 @@ function visibilidadDiv(){
     btnMasInfo.classList.toggle("cambioColor");
 }
 
+
+
+
+
+
 btnMasInfo2.addEventListener("click", visibilidadDiv2);
 
 function visibilidadDiv2(){
@@ -27,6 +38,21 @@ function visibilidadDiv2(){
 
 
 
+
+
+
+
+
+btnCategorias.addEventListener("mouseover", function(){
+
+    blackScreen.classList.add("blackScreen");
+
+});
+btnCategorias.addEventListener("mouseout", function(){
+
+    blackScreen.classList.remove("blackScreen");
+
+});
 
 
 
@@ -51,16 +77,7 @@ for( let d =0; d < padreImagenGrande.children.length; d++){
 };
 
 
-// for( let d =0; d < padreImagenGrande.children.length; d++){
-//     padreImagenGrande.children[d].addEventListener("mouseover", function(){
 
-//         this.parentNode.children[d].children[1].classList.add("AAAAAAAAAAA");
-
-//         this.children[1].classList.add("zIndex10");
-
-//         console.log(padreImagenGrande.forEach);
-//     });
-// };
 
 
 
