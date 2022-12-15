@@ -97,6 +97,9 @@ header > div > div:nth-child(4) {
     border-radius: 0 4px 4px 0;
     color: rgba(153, 153, 153, 0.493);
 }
+.boton_busqueda button a {
+    color: rgba(153, 153, 153, 0.493);
+}
 .boton_busqueda button span{
    font-size: 18px;
    padding: 0 10px;
@@ -1030,12 +1033,14 @@ footer > div p {
     justify-content: space-between;
     margin-bottom: 8px;
 }
-.cuadroSuperiorProducto > div:nth-child(2) > div:nth-child(1){
+.listaHorizontal{
     display: flex;
     font-size: 14px;
 }
-.cuadroSuperiorProducto > div:nth-child(2) > div:nth-child(1) li {
+.listaHorizontal li {
     display: flex;
+    font-size: 13px;
+    
 
 }
 
@@ -1968,6 +1973,185 @@ margin-top: 40px;
 .menuEnormeCategorias .elemento:hover {
     box-shadow: none;
 }
+
+
+
+
+
+/*//////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+/////////////////////     busquedas          /////////////////////////////
+////////////////////////////////////////////////////////////////////// */
+
+.busquedas_relacionadas {
+    display: flex;
+    color: #333;
+    font-weight: 800;
+    /* font-size: 14px; */
+    margin: 14px auto 30px auto;
+}
+.busquedas_relacionadas ul {
+    display: flex;
+}
+.busquedas_relacionadas ul a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+
+
+.seccion_busqueda {
+    /* background-color: #00a650; */
+    display: flex;
+}
+
+.izquierda {
+    max-width: 294px;
+    min-width: 210px;
+    padding-right: 14px;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    
+    /* background: rgb(255, 255, 255); */
+}
+.izquierda .listaHorizontal {
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.izquierda .listaHorizontal li{
+    display: flex;
+    font-size: 12px;
+    color: #333;
+}
+.izquierda .listaHorizontal li a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #999;
+}
+
+.tityuloBusqueda {
+    font-size: 26px;
+    color: #333;
+}
+
+.listBusqueda {
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 30px;
+}
+.listBusqueda a {
+    font-size: 14px !important;
+    color: #00a650;
+}
+
+
+
+
+
+
+
+
+/* //////   contenedor de la derecha   /////////////////////////////////////// */
+.derecha {
+    padding-right: 14px;
+    max-width: 100%;
+    /* width: 600px; */
+    height: 100%;
+    position: relative;
+    /* background: rgb(255, 0, 191); */
+    overflow: hidden; 
+    
+     
+}
+
+/* bonon de ordenar-------------------------------- */
+.ordenar {
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+.ordenar span  {
+    font-size: 13px;
+    margin-right: 6px;
+    color: #333;
+}
+
+/* cuadros de tiendas ofociales arriba ------------- */
+
+ .Tiendas_oficiales {
+    width: 100% !important;
+    /* background: blue; */
+    margin: 45px auto 25px auto;
+}
+
+.Tiendas_oficiales .Seccion .anuncioDos {
+    overflow: hidden;
+    height: 96px;
+    width: 96px; 
+    min-width: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---------------   todos los elementos de la busqueda   ------------------------------------- */
+
+
+
+.seccionBusqueda .elementosSeccion {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    gap: 16px;
+}
+
+.elementosBusqueda {
+    display: flex;
+    flex-wrap: wrap;
+    height: 440px;
+
+
+}
+
+.elementosBusqueda a {
+    width: 283px ;
+    max-width: 283px;
+    /* background-color: yellow; */
+    height: 440px;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0;
+}
+
+
+.elementosBusqueda .imagenElemento {
+    width: 100%;
+    max-height: 100%;
+    width: 283px !important;
+    height: 283px !important;
+}
+.elementosBusqueda .elemento .descripcionElemento > p:nth-child(1) {
+    font-size: 14px;
+    color: #333;
+}
+.elementosBusqueda .elemento .descripcionElemento{
+    height: auto;
+    overflow: hidden;
+}
+.elementosBusqueda .elemento .descripcionElemento > p:nth-child(4) {
+    display: flex;
+    color: #00a650;
+}
+
+
+
+
+
+
+
 
 
 
